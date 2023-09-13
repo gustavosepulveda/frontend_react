@@ -49,7 +49,7 @@ const Header = () => {
 					transition={{ duration: 1, ease: "easeInOut" }}
 					src={images.circle}
 					alt="profile-circle"
-					className="overlay_cirlce"
+					className="overlay_circle"
 				/>
 			</motion.div>
 
@@ -58,13 +58,18 @@ const Header = () => {
 				whileInView={scaleVariants.whileInView}
 				className="app__header-cirlces"
 			>
-				{[images.html, images.css, images.javascript, images.react, images.typescript, images.node].map(
-					(circle, index) => (
-						<div className="circle-cmp app__flex" key={`circle-${index}`}>
-							<img src={circle} alt="circle" />
-						</div>
-					)
-				)}
+				{[
+					images.html,
+					images.css,
+					images.javascript,
+					images.react,
+					images.typescript,
+					images.node,
+				].map((circle, index) => (
+					<div className="circle-cmp app__flex" key={`circle-${index}`}>
+						<img src={circle} alt="circle" />
+					</div>
+				))}
 			</motion.div>
 		</div>
 	)
