@@ -10,7 +10,7 @@
 	display: flex;
 	flex-direction: row;
 
-	@media screen and (min-width: 900px) {
+	@media screen and (max-width: 900px) {
 		width: 100%;
 		flex-direction: column;
 	}
@@ -25,7 +25,7 @@
 
 	margin-right: 5rem;
 
-	@media screen and (min-width: 900px) {
+	@media screen and (max-width: 900px) {
 		margin-right: 0;
 		justify-content: center;
 		align-items: center;
@@ -41,11 +41,28 @@
 	div {
 		width: 90px;
 		height: 90px;
-        border-radius: 50%;
-        background-color: #fff;
+		border-radius: 50%;
+		background-color: #fff;
 
-        img {
-            width: 50%;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+
+		&:hover {
+			box-shadow: 0 0 25px #fef4f5;
+		}
+
+        @media screen and (min-width: 2000px) {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 70px;
+            height: 70px;
+            
         }
 	}
 }
